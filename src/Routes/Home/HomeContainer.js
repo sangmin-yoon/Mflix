@@ -29,7 +29,7 @@ class HomeContainer extends React.Component {
       });
     } catch {
       this.setState({
-        error: "영화를 불러올 수 없습니다 ㅠㅠ",
+        error: "영화정보를 불러올 수 없습니다 ㅠㅠ",
       });
     } finally {
       this.setState({
@@ -40,7 +40,6 @@ class HomeContainer extends React.Component {
 
   render() {
     const { nowPlaying, upcoming, popular, error, loading } = this.state;
-    console.log(this.state);
     return (
       <HomePresenter
         nowPlaying={nowPlaying}
