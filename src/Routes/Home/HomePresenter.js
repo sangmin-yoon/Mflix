@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
 import Message from "Components/Message";
+import Poster from "Components/Poster";
 
 const Container = styled.div`
   padding: 0px 20px;
@@ -15,23 +16,53 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
   ) : (
     <Container>
       {nowPlaying && nowPlaying.length > 0 && (
-        <Section title="Now Playing">
+        <Section title="상영중">
           {nowPlaying.map((movie) => (
-            <span key={movie.id}>{movie.title}</span>
+            <Poster
+              key={movie.id}
+              id={movie.id}
+              imageUrl={movie.poster_path}
+              title={movie.title}
+              rating={movie.vote_average}
+              year={
+                movie.release_date ? movie.release_date.substring(0, 4) : ""
+              }
+              isMovie={true}
+            />
           ))}
         </Section>
       )}
       {upcoming && upcoming.length > 0 && (
         <Section title="개봉예정">
           {upcoming.map((movie) => (
-            <span key={movie.id}>{movie.title}</span>
+            <Poster
+              key={movie.id}
+              id={movie.id}
+              imageUrl={movie.poster_path}
+              title={movie.title}
+              rating={movie.vote_average}
+              year={
+                movie.release_date ? movie.release_date.substring(0, 4) : ""
+              }
+              isMovie={true}
+            />
           ))}
         </Section>
       )}
       {popular && popular.length > 0 && (
-        <Section title="Popular Movie">
+        <Section title="인기영화">
           {popular.map((movie) => (
-            <span key={movie.id}>{movie.title}</span>
+            <Poster
+              key={movie.id}
+              id={movie.id}
+              imageUrl={movie.poster_path}
+              title={movie.title}
+              rating={movie.vote_average}
+              year={
+                movie.release_date ? movie.release_date.substring(0, 4) : ""
+              }
+              isMovie={true}
+            />
           ))}
         </Section>
       )}

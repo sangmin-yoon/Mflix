@@ -13,6 +13,14 @@ const SHeader = styled.header`
   padding: 0px 10px;
   background-color: rgba(20, 20, 20, 0.8);
   box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+`;
+
+const Title = styled.h1`
+  font-size: 30px;
+  color: red;
+  margin-right: 50px;
+  letter-spacing: 5px;
 `;
 
 const List = styled.ul`
@@ -40,6 +48,9 @@ const Header = () => {
 
   return (
     <SHeader>
+      <Title>
+        <Link to="/">Mflix</Link>
+      </Title>
       <List>
         <Item current={pathname === "/"}>
           <SLink to="/">Movies</SLink>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "../CssAnimation/Loader.css";
 
 const Container = styled.div`
   height: 100vh;
@@ -10,6 +11,13 @@ const Container = styled.div`
   margin-top: 20px;
 `;
 
-const Loader = () => <Container>⏰</Container>;
+const Loader = () => (
+  <Container>
+    <div className="loading-container">
+      <div className="loading"></div>
+      <div id="loading-text">loading</div>
+    </div>
+  </Container>
+);
 
 export default Loader;
