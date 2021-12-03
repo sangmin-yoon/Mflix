@@ -5,6 +5,7 @@ import Loader from "Components/Loader";
 import Section from "Components/Section";
 import Message from "Components/Message";
 import Poster from "Components/Poster";
+import { Helmet } from "react-helmet-async";
 
 const Container = styled.div`
   padding: 20px;
@@ -30,6 +31,9 @@ const SearchPresenter = ({
   error,
 }) => (
   <Container>
+    <Helmet>
+      <title>Search | Mflix</title>
+    </Helmet>
     <Form onSubmit={handleSubmit}>
       <Input
         placeholder="영화, TV프로그램을 검색해주세요."
