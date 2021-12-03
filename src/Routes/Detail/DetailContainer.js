@@ -37,18 +37,16 @@ class DetailContainer extends React.Component {
       window.location.href = "/";
     }
     let result = null;
-    if (isMovie) {
-      try {
-        if (isMovie) {
-          ({ data: result } = await moviesApi.movieDetail(NumberId));
-        } else {
-          ({ data: result } = await tvApi.showDetail(NumberId));
-        }
-      } catch {
-        this.setState({ error: "정보를 찾을 수 없습니다 ㅠㅠ" });
-      } finally {
-        this.setState({ loading: false, result });
+    try {
+      if (isMovie) {
+        ({ data: result } = await moviesApi.movieDetail(NumberId));
+      } else {
+        ({ data: result } = await tvApi.showDetail(NumberId));
       }
+    } catch {
+      this.setState({ error: "정보를 찾을 수 없습니다 ㅠㅠ" });
+    } finally {
+      this.setState({ loading: false, result });
     }
   }
 

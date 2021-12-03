@@ -15,7 +15,7 @@ const RouterComponent = () => (
       <Route path="/tv/popular" render={() => <h1>popular</h1>} />
       <Route path="/search" element={<Search />} />
       <Route path="/movie/:id" element={<Detail />} />
-      <Route path="/tv/:id" element={<Detail />} />
+      <Route path="/show/:id" element={<Detail />} />
     </Routes>
   </Router>
 );
