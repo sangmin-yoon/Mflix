@@ -40,7 +40,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
           </Section>
         )}
         {popular && popular.length > 0 && (
-          <Section title="인기있는">
+          <Section title="인기 프로그램">
             {popular.map((show) => (
               <Poster
                 key={show.id}
@@ -56,7 +56,7 @@ const TVPresenter = ({ topRated, popular, airingToday, loading, error }) => (
           </Section>
         )}
         {airingToday && airingToday.length > 0 && (
-          <Section title="오늘방영">
+          <Section title="현재 방영중">
             {airingToday.map((show) => (
               <Poster
                 key={show.id}
