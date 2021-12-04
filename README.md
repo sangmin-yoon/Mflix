@@ -2,6 +2,8 @@
 
 Learning React and ES6 by building a Movie Discovery App.
 
+[Mflix 바로가기](https://mystifying-lamport-c05f37.netlify.app/)
+
 ## Screens
 
 - [x] Home
@@ -20,11 +22,20 @@ Learning React and ES6 by building a Movie Discovery App.
 - [x] Movie Detail
 - [x] Search (TV, Movie)
 
+## 🧑‍💻
+
+- Class 컴포넌트
+- styled-compnet
+- axios
+- react-helmet-async
+- netlify배포
+
 ## 📚
 
 - styled-component를 조금 알게 됐다.
 - axios를 이용한 api를 효율적으로 사용하는 방법
 - React의 Container-Presenter 패턴
+- netlify를 이용한 배포
 
 ## 🔍
 
